@@ -5,12 +5,15 @@
     }
 
     &--show {
+      justify-content: space-between;
       background-color: $c-white;
+      flex-direction: column;
       padding-right: 10px;
       padding-left: 10px;
+      overflow-x: scroll;
       padding-top: 70px;
       position: fixed;
-      display: block;
+      display: flex;
       z-index: 900;
       bottom: 0;
       left: 0;
@@ -69,9 +72,7 @@
 
   &__footer {
     margin-bottom: 76px;
-    position: absolute;
     display: flex;
-    bottom: 0;
 
     @include media("<=desktop") {
       margin-bottom: 30px;
