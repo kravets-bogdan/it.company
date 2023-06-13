@@ -72,10 +72,13 @@
 
   &__footer {
     margin-bottom: 76px;
+    position: absolute;
     display: flex;
+    bottom: 0;
 
     @include media("<=desktop") {
       margin-bottom: 30px;
+      position: relative;
     }
   }
 

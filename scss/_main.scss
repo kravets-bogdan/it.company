@@ -55,7 +55,6 @@ img {
   padding-top: 40px;
   color: $c-black;
   height: 100%;
-  bottom: 0;
 
   @include media("<=custom-1200") {
     padding-right: 15px;
@@ -90,6 +89,7 @@ li {
   grid-template-columns: 305px auto;
   grid-gap: 70px;
   display: grid;
+  height: 100%;
 
   @include media("<=custom-1200") {
     grid-template-columns: 250px auto;
