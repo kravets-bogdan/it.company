@@ -97,7 +97,7 @@ li {
   }
 
   @include media("<=desktop") {
-    grid-template-columns: auto auto;
+    grid-template-columns: 70px auto;
     grid-gap: 15px;
   }
 
