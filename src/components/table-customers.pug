@@ -1,0 +1,60 @@
+mixin table-customers()
+  .customers
+    .customers__head 
+      .customers__text 
+        span.customers__title All Customers
+        span.customers__subtext Active Members
+      .customers__search 
+        input(type="text" placeholder="Search").customers__input
+        svg.icon.icon-search.customers__icon
+          use(xlink:href='#icon-search')
+    table.customers__table 
+      thead
+        tr
+          th.customers__table-header Customer Name
+          th.customers__table-header Company
+          th.customers__table-header Phone Number
+          th.customers__table-header Email
+          th.customers__table-header Country
+          th.customers__table-header Status
+      tbody
+        +customer({customer:'Jane Cooper', company:'Microsoft', phone:'(225) 555-0118', email:'jane@microsoft.com', country:'United States', status:'active customers__status', statusText:'Active', table:true})
+        +customer({customer:'Floyd Miles', company:'Yahoo', phone:'(205) 555-0100', email:'floyd@yahoo.com', country:'Kiribati', status:'inactive customers__status', statusText:'Inactive', table:true})
+        +customer({customer:'Ronald Richards', company:'Adobe', phone:'(302) 555-0107', email:'ronald@adobe.com', country:'Israel', status:'inactive customers__status', statusText:'Inactive', table:true})
+        +customer({customer:'Marvin McKinney', company:'Tesla', phone:'(252) 555-0126', email:'marvin@tesla.com', country:'Iran', status:'active customers__status', statusText:'Active', table:true})
+        +customer({customer:'Jerome Bell', company:'Google', phone:'(629) 555-0129', email:'jerome@google.com', country:'Réunion', status:'active customers__status', statusText:'Active', table:true})
+        +customer({customer:'Kathryn Murphy', company:'Microsoft', phone:'(406) 555-0120', email:'kathryn@microsoft.com', country:'Curaçao', status:'active customers__status', statusText:'Active', table:true})
+        +customer({customer:'Jacob Jones', company:'Yahoo', phone:'(208) 555-0112', email:'jacob@yahoo.com', country:'Brazil', status:'active customers__status', statusText:'Active', table:true})
+        +customer({customer:'Kristin Watson', company:'Facebook', phone:'(704) 555-0127', email:'kristin@facebook.com', country:'Åland Islands', status:'inactive customers__status', statusText:'Inactive', table:true})
+    .customers__cards 
+      +customer({customer:'Jane Cooper', company:'Microsoft', phone:'(225) 555-0118', email:'jane@microsoft.com', country:'United States', status:'active customers__status', statusText:'Active'})
+      +customer({customer:'Floyd Miles', company:'Yahoo', phone:'(205) 555-0100', email:'floyd@yahoo.com', country:'Kiribati', status:'inactive customers__status', statusText:'Inactive'})
+      +customer({customer:'Ronald Richards', company:'Adobe', phone:'(302) 555-0107', email:'ronald@adobe.com', country:'Israel', status:'inactive customers__status', statusText:'Inactive'})
+      +customer({customer:'Marvin McKinney', company:'Tesla', phone:'(252) 555-0126', email:'marvin@tesla.com', country:'Iran', status:'active customers__status', statusText:'Active'})
+      +customer({customer:'Jerome Bell', company:'Google', phone:'(629) 555-0129', email:'jerome@google.com', country:'Réunion', status:'active customers__status', statusText:'Active'})
+      +customer({customer:'Kathryn Murphy', company:'Microsoft', phone:'(406) 555-0120', email:'kathryn@microsoft.com', country:'Curaçao', status:'active customers__status', statusText:'Active'})
+      +customer({customer:'Jacob Jones', company:'Yahoo', phone:'(208) 555-0112', email:'jacob@yahoo.com', country:'Brazil', status:'active customers__status', statusText:'Active'})
+      +customer({customer:'Kristin Watson', company:'Facebook', phone:'(704) 555-0127', email:'kristin@facebook.com', country:'Åland Islands', status:'inactive customers__status', statusText:'Inactive'})
+    .customers__footer 
+      p.customers__info Showing data 1 to 8 of  256K entries
+      .customers__pages 
+        .customers__page
+          span < 
+        .customers__page.customers__page--active
+          span 1
+        .customers__page
+          span 2
+        .customers__page
+          span 3
+        .customers__page
+          span 4 
+        .customers__page.customers__page--transparent
+          span ...
+        .customers__page
+          span 40
+        .customers__page
+          span >
+
+
+
+

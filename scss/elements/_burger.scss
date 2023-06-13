@@ -1,0 +1,43 @@
+.burger {
+  display: none;
+
+  &__button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+  }
+
+  &__line {
+    background-color: $c-black;
+    transition: $t-normal;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    display: block;
+    width: 15px;
+    height: 2px;
+
+    &:nth-child(1) {
+      transform: translateY(4px) rotate(45deg);
+    }
+
+    &:last-child {
+      transform: translateY(-3px) rotate(-45deg);
+      margin-bottom: 0;
+    }
+  }
+
+  @include media("<=desktop") {
+    position: fixed;
+    display: block;
+    z-index: 990;
+    left: 23px;
+
+    &--open &__line:nth-child(1) {
+      transform: translateY(4px) rotate(135deg);
+    }
+
+    &--open &__line:nth-child(2) {
+      transform: translateY(-3px) rotate(-135deg);
+    }
+  }
+}

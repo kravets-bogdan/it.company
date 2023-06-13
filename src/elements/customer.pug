@@ -1,0 +1,18 @@
+mixin customer(args={})
+  if args.table 
+    tr
+      td.customers__table-date=args.customer
+      td.customers__table-date=args.company
+      td.customers__table-date=args.phone
+      td.customers__table-date=args.email
+      td.customers__table-date=args.country
+      td.customers__table-date 
+        span(class="customers__"+args.status)=args.statusText
+  else 
+    .customers__card 
+      span=args.customer
+      span=args.company
+      span=args.phone
+      span=args.email
+      span=args.country
+      span(class="customers__"+args.status)=args.statusText

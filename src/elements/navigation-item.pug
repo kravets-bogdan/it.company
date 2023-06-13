@@ -1,0 +1,9 @@
+mixin navigation-item(args={})
+  li(class=args.liclass)
+    a(href=args.href class=args.aclass)
+      svg.icon(class=args.iclass)
+        use(xlink:href="#icon-" + args.name)
+      span=args.text 
+      if args.arrow 
+        svg.icon.icon-arrow(class=args.arrclass)
+          use(xlink:href="#icon-arrow")

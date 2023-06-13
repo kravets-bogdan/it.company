@@ -1,0 +1,18 @@
+mixin sidebar()
+  aside.sidebar 
+    //- Burger
+    +burger()
+    .sidebar__wrapper#js-sidebar
+      +logo 
+      nav.sidebar__navigation 
+        +navigation-item({liclass:"sidebar__item", iclass:'icon-dashboard sidebar__icon', name:"dashboard",aclass:'sidebar__link', href:"#", text:'Dashboard'})
+        +navigation-item({liclass:"sidebar__item", iclass:'icon-product sidebar__icon', name:"product",aclass:'sidebar__link', href:"#", text:'Product', arrow:true ,arrclass:"sidebar__icon sidebar__icon--arr"})
+        +navigation-item({liclass:"sidebar__item", iclass:'icon-customer sidebar__icon ', name:"customer",aclass:'sidebar__link', href:"#", text:'Customers', arrow:true ,arrclass:"sidebar__icon sidebar__icon--arr"})
+        +navigation-item({liclass:"sidebar__item", iclass:'icon-income sidebar__icon', name:"income",aclass:'sidebar__link', href:"#", text:'Income', arrow:true ,arrclass:"sidebar__icon sidebar__icon--arr"})
+        +navigation-item({liclass:"sidebar__item", iclass:'icon-promote sidebar__icon', name:"promote",aclass:'sidebar__link', href:"#", text:'Promote', arrow:true ,arrclass:"sidebar__icon sidebar__icon--arr"})
+        +navigation-item({liclass:"sidebar__item", iclass:'icon-helps sidebar__icon', name:"helps",aclass:'sidebar__link', href:"#", text:'Help', arrow:true ,arrclass:"sidebar__icon sidebar__icon--arr"})
+      .sidebar__footer 
+        img(class="sidebar__photo" src="./assets/images/evano.jpg" alt="evano")
+        .sidebar__text 
+          span.sidebar__title Evano
+          span.sidebar__subtext Project Manager
